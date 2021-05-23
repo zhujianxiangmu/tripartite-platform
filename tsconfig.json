@@ -2,19 +2,21 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
+    "strict": true,  //启用所有严格类型检查
+    "jsx": "preserve",//在 .tsx文件里支持JSX： "React"或 "Preserve"或"react-native"
+    "importHelpers": true, // 是否从 tilib工具中导入辅助工具
+    "moduleResolution": "node", // 处理模块的方式
+    "skipLibCheck": true, // 忽略所有（*.d.ts）的检查类型
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env"
+    "sourceMap": true, // 是否生成相应的 .map文件
+    "baseUrl": ".",// 解析非相对模块名的基准目录
+    "types": [ //要包含的类型声明文件名列表
+      "node",
+      "jest",
+       "webpack-env"
     ],
-    "paths": {
+    "paths": {  //映射位置，@ 在项目中表示src路径
       "@/*": [
         "src/*"
       ]
